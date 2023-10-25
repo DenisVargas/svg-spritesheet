@@ -1,0 +1,19 @@
+{
+  "name": "svg-loader",
+  "version": "1.0.0",
+  "description": "A set of custom components that allows loading and inserting svg symbols with only one file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "dev": "vite dev"
+  },
+  "author": "Denis Vargas Rivero",
+  "license": "MIT",
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.2.0"
+  },
+  "devDependencies": {
+    "vite": "^4.5.0"
+  }
+}

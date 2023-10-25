@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test SVG Loader</title>
+    <script src="./dist/svg-spritesheet.js"></script>
+</head>
+<body>
+    <h1>Esto es un test</h1>
+
+    <script>
+        document.addEventListener('svg-inserted', ()=>{
+            console.log('svg-inserted');
+        });
+    </script>
+
+    <preload-svg src="./assets/test.svg"></preload-svg>
+    <insert-svg id="folder1" symbol="folder" width="100" height="100"></insert-svg>
+    <insert-svg id="folder2" symbol="folder" width="100" height="100"></insert-svg>
+    <insert-svg id="turnOff" symbol="turn_off" width="100" height="100"></insert-svg>
+    <insert-svg id="turnOn" symbol="turn_on" width="100" height="100"></insert-svg>
+    <insert-svg id="app" symbol="apps" width="100" height="100"></insert-svg>
+
+    <!-- Metodo tradicional -->
+    <!-- <svg xlink:href="./assets/spritesheet.svg"></svg> -->
+    <!-- Alternativa 1 -->
+    <!-- <object data="./assets/spritesheet.svg" type="image/svg+xml"></object> -->
+</body>
+</html>
