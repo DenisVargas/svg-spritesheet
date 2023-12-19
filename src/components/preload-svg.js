@@ -18,7 +18,7 @@ class preloadSVG extends HTMLElement {
             return;
         }
 
-        console.log(`preload-svg funciona!, src: ${this.srcPath}`);
+        // console.log(`preload-svg funciona!, src: ${this.srcPath}`);
 
         document.addEventListener('DOMContentLoaded', () => {
             fetch(this.srcPath, { mode: 'no-cors' })
