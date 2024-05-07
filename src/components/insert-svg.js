@@ -23,12 +23,8 @@ class insertSVG extends HTMLElement {
         let width = this.getAttribute('width');
         let height = this.getAttribute('height');
 
-        // console.log(`insert-svg funciona!, data: ${symbol}, id: ${this.id}`);
-
         document.addEventListener('svg-loaded', (event) => {
-            // console.log("funciona");
             const spritesheet = event.detail.spritesheet;
-            console.log(spritesheet);
             const symbolElement = spritesheet.querySelector(`#${symbol}`);
 
             const svg = SVG().id(this.id);
@@ -40,7 +36,6 @@ class insertSVG extends HTMLElement {
             }
             svg.node.innerHTML = symbolElement.innerHTML;
             svg.node.setAttribute('viewBox', symbolElement.getAttribute('viewBox'));
-            // svg.use(symbol);
 
             document.insertionTracker.removeInsertion();
             this.replaceWith(svg.node);

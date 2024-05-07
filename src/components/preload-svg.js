@@ -39,7 +39,6 @@ class preloadSVG extends HTMLElement {
                 });
 
                 document.insertionTracker = new InsertionTracker(document.querySelectorAll('insert-svg').length);
-
                 document.dispatchEvent(new CustomEvent('svg-loaded', { detail: { spritesheet: svgElement.node }}));
                 this.remove();
             })
